@@ -136,8 +136,7 @@ class StdImageFieldFile(ImageFieldFile):
         """Return the variation file name based on the variation."""
         path, ext = os.path.splitext(file_name)
         path, file_name = os.path.split(path)
-        if variation_name.endswith("_webp"):
-            ext = '.webp'
+        ext = '.webp'
         file_name = "{file_name}.{variation_name}{extension}".format(
             **{
                 "file_name": file_name,
