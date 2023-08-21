@@ -237,6 +237,7 @@ class StdImageField(ImageField):
                 need to remove the orphaned files yourself.
 
         """
+        kwargs.setdefault('max_length', 250)
         if not variations:
             variations = {}
         if not isinstance(variations, dict):
